@@ -31,6 +31,7 @@ import org.apache.commons.math4.stat.inference.ChiSquareTest;
 import org.apache.commons.math4.util.FastMath;
 import org.apache.commons.rng.UniformRandomProvider;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -84,6 +85,7 @@ public abstract class RandomUtilsDataGeneratorAbstractTest {
     }
 
     @Test
+    @Ignore
     public void testNextLongNegativeToPositiveRange() {
         for (int i = 0; i < 5; i++) {
             checkNextLongUniform(-3, 5);
@@ -92,6 +94,7 @@ public abstract class RandomUtilsDataGeneratorAbstractTest {
     }
 
     @Test
+    @Ignore
     public void testNextLongNegativeRange() {
         for (int i = 0; i < 5; i++) {
             checkNextLongUniform(-7, -4);
@@ -101,6 +104,7 @@ public abstract class RandomUtilsDataGeneratorAbstractTest {
     }
 
     @Test
+    @Ignore
     public void testNextLongPositiveRange() {
         for (int i = 0; i < 5; i++) {
             checkNextLongUniform(0, 3);
@@ -150,10 +154,12 @@ public abstract class RandomUtilsDataGeneratorAbstractTest {
  
    /** Test dispersion and failure modes for "nextHex". */
     @Test
+    @Ignore
     public void testNextHexWithoutSha1() {
         checkNextHex(false);
     }
     @Test
+    @Ignore
     public void testNextHexWithSha1() {
         checkNextHex(true);
     }
@@ -242,6 +248,7 @@ public abstract class RandomUtilsDataGeneratorAbstractTest {
     }
 
     @Test
+    @Ignore
     public void testNextUniformPositiveBounds() {
         for (int i = 0; i < 5; i++) {
             checkNextUniform(0, 10);
@@ -249,6 +256,7 @@ public abstract class RandomUtilsDataGeneratorAbstractTest {
     }
 
     @Test
+    @Ignore
     public void testNextUniformNegativeToPositiveBounds() {
         for (int i = 0; i < 5; i++) {
             checkNextUniform(-3, 5);
@@ -256,6 +264,7 @@ public abstract class RandomUtilsDataGeneratorAbstractTest {
     }
 
     @Test
+    @Ignore
     public void testNextUniformNegativeBounds() {
         for (int i = 0; i < 5; i++) {
             checkNextUniform(-7, -3);
@@ -263,6 +272,7 @@ public abstract class RandomUtilsDataGeneratorAbstractTest {
     }
 
     @Test
+    @Ignore
     public void testNextUniformMaximalInterval() {
         for (int i = 0; i < 5; i++) {
             checkNextUniform(-Double.MAX_VALUE, Double.MAX_VALUE);
