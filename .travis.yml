@@ -9,11 +9,18 @@ env:
   - MAVEN_OPTS="-Xmx6g -Xms2g"
 
 # only build master and the MATH_3_X branch
-branches:
-  only:
-    - develop
-    - master
-    - MATH_3_X
+#branches:
+#  only:
+#    - develop
+#    - master
+#    - MATH_3_X
+
+install: /bin/true
+
+script:
+  - echo $LC_ALL
+  - env LC_ALL=en_US.UTF-8 mvn clean test
+  - env LC_ALL=de_DE.UTF-8 mvn clean test
 
 after_success:
   - mvn clean test jacoco:report coveralls:report
